@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".SpeakActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".70">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Validate the sentence shown below"
+            android:textSize="20sp"
+            android:textColor="@color/colour_BLUE_MAP"
+            android:gravity="center"
+           android:layout_above="@+id/pager_listen"
+            android:layout_marginBottom="30dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_listen"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"></androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_listen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewpager"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="10dp">
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".30"
+
+        >
+
+        <Button
+            android:id="@+id/btn_validate"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circular_play_audio_btn_for_listen" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:text="YES"
+            android:textColor="@color/blue"
+            android:layout_centerVertical="true"
+           android:layout_toLeftOf="@+id/btn_validate"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/circular_white_btn"
+             />
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/btn_validate"
+            android:textColor="@color/blue"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circular_white_btn"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
